@@ -8,7 +8,7 @@ KIOSK_URL = "https://uni002eu5.fusionsolar.huawei.com/rest/pvms/web/kiosk/v1/sta
 def get_kiosk_data():
     try:
         # impersonate="chrome110" makes the request look exactly like a real browser
-        response = requests.get(KIOSK_URL, impersonate="chrome110", timeout=15)
+        response = requests.get(KIOSK_URL, impersonate="chrome120", timeout=15)
 
         if response.status_code == 200:
             return Response(response.text, mimetype='application/json')
